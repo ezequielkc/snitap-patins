@@ -1,0 +1,48 @@
+*,
+*::after,   /* Aplica as regras também aos pseudo-elementos gerados antes do conteúdo real */
+*::before { /* Aplica as regras também aos pseudo-elementos gerados depois do conteúdo real */
+  margin: 0; /* Remove margens padrão para evitar espaços indesejados */
+  padding: 0; /* Remove preenchimento interno padrão para consistência */
+  box-sizing: border-box; /* Inclui borda e padding no cálculo do tamanho total do elemento */
+}
+
+:root {
+  /* Cores marca */
+  --snitap-sun: #FFCD1E;
+  --snitap-sky-mid: #06B6D4;
+  --snitap-sky-light: #67E8F9;
+  --snitap-joy-mid: #DB2777;
+  --snitap-joy-light: #F472B6;
+  --snitap-leaf-mid: #16A34A;
+
+  /* Cores Base */
+  --text: #000000;
+  --highlights: #000000;
+  --background: #FAFAFA;
+
+  /* Fontes base*/
+  --ff-base: "Montserrat", sans-serif;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 2.5rem;
+  --text-xl: 4rem;
+}
+
+html, button {
+  font: 500 1rem/1.5 var(--ff-base);
+}
+
+h1, h2 {
+  font-family: "Sune", sans-serif;
+}
+
+h1 {
+  font-size: var( --text-xl);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var( --text-lg);
+  line-height: 1.2;
+}
