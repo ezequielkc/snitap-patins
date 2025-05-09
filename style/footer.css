@@ -19,6 +19,7 @@ footer {
       width: 2rem;
       transition: rotate 350ms;
 
+      /* Gira o ícone ao passar o mouse sobre ele */
       &:hover {
         rotate: 90deg;
       }
@@ -33,6 +34,7 @@ footer {
       width: fit-content;
       position: relative;
 
+      /* Ativa a linha animada sob o link ao hover */
       &:hover::after {
         opacity: 1;
         transform: scaleX(1);
@@ -70,6 +72,7 @@ footer {
 
       position: relative;
 
+      /* Expande o fundo animado ao passar o mouse sobre o ícone */
       &:hover::before {
         scale: 1;
       }

@@ -13,10 +13,12 @@
     display: flex;
     gap: 1.5rem;
 
+    /* Animação contínua que move o conteúdo horizontalmente para criar efeito de rolagem */
     animation: rolling 6s linear infinite;
   }
 
   .bg-gradient-animate {
+    /* Gradiente animado com cores customizadas */
     background: linear-gradient(
       45deg,
       var(--snitap-sky-light),
@@ -25,12 +27,14 @@
     background-size: 400%;
     background-position: 0 50%;
 
+    /* Animação que altera a posição do gradiente para criar efeito de transição suave */
     animation: bg-gradient 20s ease infinite;
   }
 }
 
 @keyframes bg-gradient {
   50% {
+    /* Move o gradiente horizontalmente até o outro extremo */
     background-position: 100% 50%;
   }
 }
@@ -40,6 +44,7 @@
     transform: translateX(0%);
   }
   100% {
+    /* Move o conteúdo para a esquerda, usado para criar o loop de rolagem horizontal */
     transform: translateX(-50%);
   }
 }

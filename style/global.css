@@ -3,10 +3,11 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que paddings e bordas não expandam o tamanho dos elementos */
 }
 
 :root {
+  /* Paleta de cores customizada */
   --snitap-sun: #ffcd1e;
   --snitap-sky-mid: #06b6d4;
   --snitap-sky-light: #67e8f9;
@@ -16,10 +17,11 @@
 
   --text: #000000;
   --highlights: #000000;
-  --background: #fafafa;
+  --background: #fafafad3;
 
   --ff-base: 'Montserrat', sans-serif;
 
+  /* Tamanhos tipográficos reutilizáveis */
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 2.5rem;
@@ -28,12 +30,13 @@
 
 html,
 button {
+  /* Fonte base aplicada globalmente e aos botões */
   font: 500 1rem/1.5 var(--ff-base);
 }
 
 h1,
 h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', sans-serif; /* Destaque visual para títulos */
 }
 
 h1 {
@@ -48,5 +51,5 @@ h2 {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none; /* Remove sublinhado padrão dos links */
 }

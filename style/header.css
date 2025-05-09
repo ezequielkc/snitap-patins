@@ -15,10 +15,12 @@ header.top {
     transition: transform 500ms;
   }
 
+  /* Anima rotação ao passar o mouse sobre o logo */
   img[src*='logo']:hover {
     transform: rotate(90deg);
   }
 
+  /* Gira o ícone do carrinho ao hover */
   img[src*='shopping']:hover {
     transform: rotate(-30deg);
   }
@@ -43,6 +45,6 @@ header.top {
     align-items: center;
     justify-content: center;
 
-    border-radius: 50%;
+    border-radius: 50%; /* Badge circular para notificações (ex: quantidade no carrinho) */
   }
 }

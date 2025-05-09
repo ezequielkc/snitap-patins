@@ -1,0 +1,228 @@
+@media (max-width: 768px) {
+  /* ========== GLOBAL ========== */
+  html {
+    font-size: 87.5%; /* Reduz o tamanho base da fonte para melhor legibilidade em telas menores */
+  }
+
+  body {
+    padding: 0;
+    overflow-x: hidden; /* Evita rolagem horizontal inesperada */
+  }
+
+  /* ========== HEADER ========== */
+  header.top {
+    justify-content: center; /* Centraliza conteúdo no mobile */
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  header.top a img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  header.top a span {
+    top: -0.4rem;
+    right: -0.4rem;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.625rem; /* Badge menor no carrinho */
+  }
+
+  /* ========== HERO ========== */
+  section.hero {
+    flex-direction: column; /* Coluna no mobile */
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  section.hero h1 {
+    font-size: 1.75rem;
+    max-width: 100%;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  section.hero h1 > div {
+    height: 2.5rem; /* Altura reduzida para animação vertical */
+    margin-left: 0.5rem;
+  }
+
+  section.hero h1 span {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    animation: slideUp 8s ease-in-out infinite; /* Mesma animação adaptada ao novo tamanho */
+  }
+
+  /* ========== HERO BUTTONS ========== */
+  section.hero .buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 20rem;
+    margin-inline: auto;
+    gap: 1rem;
+  }
+
+  section.hero .buttons .button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    justify-content: center;
+  }
+
+  section.hero .buttons .play span {
+    padding: 1rem;
+  }
+
+  /* ========== HERO IMAGES ========== */
+  section.hero > div:nth-child(2) {
+    max-width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.hero > div:nth-child(2) .content {
+    width: 100%;
+    max-width: 15rem;
+    height: 40vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+  section.hero > div:nth-child(2) .content img {
+    position: absolute;
+    width: 100%;
+    transform: none !important;
+    animation: none !important; /* Remove animações para simplificar em telas pequenas */
+  }
+
+  section.hero > div:nth-child(2) .content img[src*="ellipse"] {
+    z-index: 1;
+  }
+
+  section.hero > div:nth-child(2) .content img[src*="patins"] {
+    z-index: 2;
+  }
+
+  section.hero > div:nth-child(2) .content img[src*="stars-1"] {
+    z-index: 3;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+  }
+
+  section.hero > div:nth-child(2) .content img[src*="stars-2"] {
+    display: none; /* Oculta a segunda estrela no mobile */
+  }
+
+  /* ========== GALLERY ========== */
+  section.gallery {
+    padding: 2rem 1.5rem;
+  }
+
+  section.gallery .content {
+    /* Stack vertical para melhor legibilidade */
+    grid-template-areas:
+      "A"
+      "B"
+      "C"
+      "D";
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  section.gallery figure img {
+    height: auto;
+    max-height: 18rem;
+  }
+
+  section.gallery figcaption {
+    font-size: 0.875rem;
+    padding: 1rem 1.25rem;
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: auto;
+  }
+
+  footer nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  footer .social-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* ========== ANIMAÇÃO RESPONSIVA PARA O TÍTULO DO HERO ========== */
+@media (max-width: 768px) {
+  @keyframes slideUp {
+    0%, 22% {
+      transform: translateY(0);
+    }
+
+    23% {
+      transform: translateY(calc(-2.5rem - 15px));
+    }
+    25% {
+      transform: translateY(calc(-2.5rem + 10px));
+    }
+    27% {
+      transform: translateY(calc(-2.5rem - 5px));
+    }
+    29% {
+      transform: translateY(calc(-2.5rem + 5px));
+    }
+
+    33%, 55% {
+      transform: translateY(-2.5rem);
+    }
+
+    56% {
+      transform: translateY(calc(-5rem - 15px));
+    }
+    58% {
+      transform: translateY(calc(-5rem + 10px));
+    }
+    60% {
+      transform: translateY(calc(-5rem - 5px));
+    }
+    62% {
+      transform: translateY(calc(-5rem + 5px));
+    }
+
+    66%, 88% {
+      transform: translateY(-5rem);
+    }
+
+    89% {
+      transform: translateY(calc(-7.5rem - 15px));
+    }
+    91% {
+      transform: translateY(calc(-7.5rem + 10px));
+    }
+    93% {
+      transform: translateY(calc(-7.5rem - 5px));
+    }
+    95% {
+      transform: translateY(calc(-7.5rem + 5px));
+    }
+
+    100% {
+      transform: translateY(-7.5rem);
+    }
+  }
+}

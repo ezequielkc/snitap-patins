@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Pré-conexão para otimizar carregamento das fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -8,26 +9,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snitap Patins</title>
 
+  <!-- Estilos principais do projeto -->
   <link rel="stylesheet" href="style/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@500&family=Syne:wght@700&display=swap" rel="stylesheet">
-
 </head>
 <body>
+  <!-- Topo com logo e ícone de compras -->
   <header class="top">
     <a href="#">
       <img src="assets/logo.svg" alt="" />
     </a>
     <a href="#">
       <img src="assets/icons/shopping-bag.svg" alt="" />
-      <span>1</span>
+      <span>1</span> <!-- Badge com quantidade de itens -->
     </a>
   </header>
 
+  <!-- Seção principal do herói com texto e imagem -->
   <section class="hero">
     <div>
       <h1>
         Snitap, sua vida mais
         <div>
+          <!-- Palavras com animação vertical (carrossel) -->
           <span>radical</span>
           <span>divertida</span>
           <span>saudável</span>
@@ -35,6 +39,7 @@
         </div>
       </h1>
 
+      <!-- Botões de ação -->
       <div class="buttons">
         <a href="#" class="button buy shadow">
           <img src="assets/icons/shopping-bag.svg" alt="" />
@@ -50,6 +55,7 @@
       </div>
     </div>
 
+    <!-- Bloco visual com patins e elementos gráficos -->
     <div>
       <div class="content">
         <img src="assets/hero/ellipse.svg" alt="" />
@@ -60,11 +66,12 @@
     </div>
   </section>
 
+  <!-- Seção decorativa com gradiente animado -->
   <section class="banner">
     <div class="scroller bg-gradient-animate"></div>
   </section>
-  
 
+  <!-- Galeria com fotos e figcaption -->
   <section class="gallery">
     <header>
       <span>GALERIA DE FOTOS</span>
@@ -72,6 +79,7 @@
     </header>
 
     <div class="content">
+      <!-- Cada figure representa uma imagem postada -->
       <figure>
         <img src="assets/images/01.png" alt="" />
         <figcaption>
@@ -105,6 +113,7 @@
       </figure>
     </div>
 
+    <!-- Rodapé da galeria -->
     <footer>
       <div class="logo">
         <img src="assets/logo.svg" alt="" />
@@ -117,6 +126,7 @@
         <a href="#">Política de privacidade</a>
       </nav>
 
+      <!-- Ícones de redes sociais -->
       <div class="social-links">
         <a href="#" title="instagram">
           <img src="assets/icons/instagram.svg" alt="" />
@@ -132,5 +142,6 @@
         </a>
       </div>
     </footer>
+  </section>
 </body>
 </html>
