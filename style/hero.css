@@ -1,28 +1,26 @@
 section.hero {
-  /* Define largura máxima e garante que a seção se ajuste ao tamanho da tela até esse limite */
   max-width: 80rem;
   width: 100%;
-  padding: 2.5rem 2rem;             /* Espaçamento interno (topo/baixo, lados) */
-  margin-inline: auto;             /* Centraliza horizontalmente dentro do contêiner pai */
+  padding: 2.5rem 2rem;
+  margin-inline: auto;
 
-  display: flex;                   /* Ativa layout flexível */
-  align-items: center;            /* Alinha itens verticalmente ao centro */
-  justify-content: space-between; /* Distribui espaço entre os filhos com espaçamento máximo */
-  overflow: hidden;               /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
 
   & h1 {
-    max-width: 40rem;             /* Limita largura do título principal */
+    max-width: 40rem;
   }
 
   & h1 div {
-    display: inline-block;        /* Permite que o div se comporte como um texto em linha com dimensões */
-    overflow: hidden;             /* Esconde o conteúdo excedente verticalmente (para animação) */
-    height: 5rem;                 /* Altura fixa usada como base da animação */
-    width: min-content;           /* Largura mínima necessária para conter o conteúdo */
-    vertical-align: bottom;       /* Alinha o conteúdo ao final da linha base */
+    display: inline-block;
+    overflow: hidden;
+    height: 5rem;
+    width: min-content;
+    vertical-align: bottom;
   }
 
-  /* Define cor para spans específicos dentro do h1 */
   & h1 span:nth-child(1),
   & h1 span:nth-child(4) {
     color: var(--snitap-sky-mid);
@@ -37,70 +35,120 @@ section.hero {
   }
 
   & h1 span {
-    display: block;               /* Cada palavra ou linha ocupa seu próprio espaço vertical */
-    animation: slideUp 5s infinite ease; /* Aplica animação contínua com suavidade */
+    display: block;
+
+    animation: slideUp 5s infinite ease;
+  }
+
+  /* buttons */
+  & .buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    & .button {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      border-radius: 5rem;
+
+      transition: scale 350ms;
+
+      &.buy {
+        padding: 1.5rem 3rem;
+        background-color: var(--snitap-sun);
+      }
+
+      &.play span {
+        padding: 1.5rem;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+
+    & .shadow {
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1), 0 9px 9px rgb(0 0 0 / 0.09),
+        0 20px 12px rgb(0 0 0 / 0.05), 0 36px 15px rgb(0 0 0 / 0.01);
+    }
   }
 }
 
 @keyframes slideUp {
-  /* Palavra 1 (posição inicial e estática) */
-  0%, 22% {
+  /* radical static */
+  0%,
+  22% {
     transform: translateY(0);
   }
 
-  /* Transição animada para palavra 2 */
+  /* divertida in */
   23% {
     transform: translateY(calc(-5rem - 15px));
   }
+
   25% {
     transform: translateY(calc(-5rem + 10px));
   }
+
   27% {
     transform: translateY(calc(-5rem - 5px));
   }
+
   29% {
     transform: translateY(calc(-5rem + 5px));
   }
 
-  /* Palavra 2 estática */
-  33%, 55% {
+  /* divertida static */
+  33%,
+  55% {
     transform: translateY(-5rem);
   }
 
-  /* Transição para palavra 3 */
+  /* saudável in */
   56% {
     transform: translateY(calc(-10rem - 15px));
   }
+
   58% {
     transform: translateY(calc(-10rem + 10px));
   }
+
   60% {
     transform: translateY(calc(-10rem - 5px));
   }
+
   62% {
     transform: translateY(calc(-10rem + 5px));
   }
 
-  /* Palavra 3 estática */
-  66%, 88% {
+  /* saudável static */
+  66%,
+  88% {
     transform: translateY(-10rem);
   }
 
-  /* Transição para palavra 4 */
+  /* radical in */
   89% {
     transform: translateY(calc(-15rem - 15px));
   }
+
   91% {
     transform: translateY(calc(-15rem + 10px));
   }
+
   93% {
     transform: translateY(calc(-15rem - 5px));
   }
+
   95% {
     transform: translateY(calc(-15rem + 5px));
   }
 
-  /* Palavra 4 estática */
   100% {
     transform: translateY(-15rem);
   }
